@@ -1,17 +1,22 @@
 package stream.tv;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class StreamerTest {
 
     @Test
-    void Given_Gold_User_When_Player_Invoked_Then_Stream_Content() {
+    void Given_Free_User_When_Player_Invoked_Then_Stream_Content() {
+        Content content = new Content.ContentBuilder()
+                .classification("Live Stream")
+                .name("The Godfather")
+                .build();
 
         Streamer streamer = new Streamer();
-        String content = streamer.play();
-        Assertions.assertThat(content).isEqualTo("playing Live Stream-Movies-The Godfather");
+        String actual = streamer.play(content);
+
+        assertThat(actual).isEqualTo("playing Live Stream:  Movies-The Godfather");
 
     }
 }

@@ -1,7 +1,13 @@
 package stream.tv;
 
 public class Streamer {
-    public String play() {
-        return "playing Live Stream-Movies-The Godfather";
+    public String play(Content content) {
+        return new StringBuilder()
+                .append("playing ")
+                .append(content.getClassification())
+                .append(":  ")
+                .append("Movies")
+                .append("-")
+                .append(content.getName()).toString();
     }
 }
