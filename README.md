@@ -10,8 +10,9 @@ Content consists of 3 main classifications:
     - Sports
     - TV Series
     - Local Programming
-2.  On Demand, current
-3.  On Demand, reruns
+2.  On Demand
+    - Current
+    - Rerun
 
 
 Plan Rules:
@@ -26,8 +27,8 @@ Kata Rules:
 Create a user store
 Create a content store
 
-Create a service that returns "playing [classification][subclassification][name]...." or "upgrade your plan to access this content"
-depending on the users plan, e.g., "playing Live Stream-Movies-The Godfather"
+Create a service that returns "playing [classification][name]...." or "upgrade your plan to access this content"
+depending on the users plan, e.g., "playing Live Stream:  Sports - UM vs Ohio State"
 
 Verify all plan rules (business rules) are accounted for so no one is able to stream content that does not fit their plan
 
