@@ -26,8 +26,8 @@ Kata Rules:
 Create a user store
 Create a content store
 
-Create a service that returns "playing content [name]...." or "upgrade your plan for this content"
-depending on the users plan
+Create a service that returns "playing [classification][subclassification][name]...." or "upgrade your plan to access this content"
+depending on the users plan, e.g., "playing Live Stream-Movies-The Godfather"
 
 Verify all plan rules (business rules) are accounted for so no one is able to stream content that does not fit their plan
 
