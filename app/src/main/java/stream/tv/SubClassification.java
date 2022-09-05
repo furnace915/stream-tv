@@ -2,7 +2,8 @@ package stream.tv;
 
 public enum SubClassification {
     CURRENT("Current"),
-    RERUN("Rerun");
+    RERUN("Rerun"),
+    SPORTS("Sports");
 
     private final String text;
 

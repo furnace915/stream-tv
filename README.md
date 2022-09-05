@@ -6,9 +6,7 @@ By signing up for this site you can stream content
 Content consists of 3 main classifications:
 
 1.  Live Stream
-    - Movies
     - Sports
-    - TV Series
     - Local Programming
 2.  On Demand
     - Current

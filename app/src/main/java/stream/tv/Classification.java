@@ -1,7 +1,8 @@
 package stream.tv;
 
 public enum Classification {
-    ONDEMAND("On-Demand");
+    ONDEMAND("On-Demand"),
+    LIVESTREAM("Streaming");
 
 
     private final String text;

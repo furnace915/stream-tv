@@ -35,4 +35,19 @@ public class StreamerTest {
         assertThat(actual).isEqualTo("upgrade your plan to access this content");
 
     }
+
+    @Test
+    void Given_Free_Plan_When_Play_Live_Stream_Then_Block_Content() {
+        Content content = new Content.ContentBuilder()
+                .classification(Classification.LIVESTREAM)
+                .subclassification(SubClassification.SPORTS)
+                .name("Detroit Lions Football")
+                .build();
+
+        Streamer streamer = new Streamer();
+        String actual = streamer.play(content);
+
+        assertThat(actual).isEqualTo("upgrade your plan to access this content");
+
+    }
 }
