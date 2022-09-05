@@ -5,7 +5,7 @@ public class Content {
 
     private final Classification classification;
 
-    private final String subclassification;
+    private final SubClassification subclassification;
     private final String name;
 
     private Content(ContentBuilder contentBuilder) {
@@ -18,7 +18,7 @@ public class Content {
         return classification;
     }
 
-    public String getSubclassification() {
+    public SubClassification getSubclassification() {
         return subclassification;
     }
 
@@ -30,14 +30,15 @@ public class Content {
 
         private Classification classification;
 
-        private String subclassification;
+        private SubClassification subclassification;
         private String name;
 
         public ContentBuilder classification(Classification classification) {
             this.classification = classification;
             return this;
         }
-        public ContentBuilder subclassification(String classification) {
+
+        public ContentBuilder subclassification(SubClassification classification) {
             this.subclassification = classification;
             return this;
         }

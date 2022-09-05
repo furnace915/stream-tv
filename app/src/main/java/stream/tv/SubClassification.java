@@ -1,12 +1,12 @@
 package stream.tv;
 
-public enum Classification {
-    ONDEMAND("On-Demand");
-
+public enum SubClassification {
+    CURRENT("Current"),
+    RERUN("Rerun");
 
     private final String text;
 
-    Classification(String text) {
+    SubClassification(String text) {
         this.text = text;
     }
 
