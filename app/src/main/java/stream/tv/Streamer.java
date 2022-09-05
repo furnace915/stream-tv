@@ -6,7 +6,7 @@ public class Streamer {
            if(content.getSubclassification() == "Rerun"){
                return new StringBuilder()
                        .append("playing ")
-                       .append(content.getClassification())
+                       .append(content.getClassification().getText())
                        .append(": ")
                        .append(content.getSubclassification())
                        .append(" - ")

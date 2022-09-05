@@ -3,9 +3,7 @@ package stream.tv;
 
 public class Content {
 
-    private final String classification;
-
-
+    private final Classification classification;
 
     private final String subclassification;
     private final String name;
@@ -16,7 +14,7 @@ public class Content {
         this.name = contentBuilder.name;
     }
 
-    public String getClassification() {
+    public Classification getClassification() {
         return classification;
     }
 
@@ -30,12 +28,12 @@ public class Content {
 
     public static class ContentBuilder {
 
-        private String classification;
+        private Classification classification;
 
         private String subclassification;
         private String name;
 
-        public ContentBuilder classification(String classification) {
+        public ContentBuilder classification(Classification classification) {
             this.classification = classification;
             return this;
         }
@@ -51,8 +49,7 @@ public class Content {
         }
 
         public Content build() {
-            Content content = new Content(this);
-            return content;
+            return new Content(this);
         }
 
     }

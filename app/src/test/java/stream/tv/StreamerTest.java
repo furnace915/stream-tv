@@ -9,7 +9,7 @@ public class StreamerTest {
     @Test
     void Given_Free_Plan_When_Play_On_Demand_Rerun_Then_Provide_Streamed_Content() {
         Content content = new Content.ContentBuilder()
-                .classification("On-Demand")
+                .classification(Classification.ONDEMAND)
                 .subclassification("Rerun")
                 .name("The Godfather")
                 .build();
@@ -24,7 +24,7 @@ public class StreamerTest {
     @Test
     void Given_Free_Plan_When_Play_On_Demand_Movie_Then_Block_Streamed_Content() {
         Content content = new Content.ContentBuilder()
-                .classification("On-Demand")
+                .classification(Classification.ONDEMAND)
                 .subclassification("Current")
                 .name("Star Wars XX")
                 .build();
