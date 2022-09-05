@@ -1,10 +1,18 @@
 package stream.tv;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StreamerTest {
+
+    private Streamer streamer;
+
+    @BeforeEach
+    void setUp() {
+        streamer = new Streamer();
+    }
 
     @Test
     void Given_Free_Plan_When_Play_On_Demand_Rerun_Then_Provide_Streamed_Content() {
@@ -14,10 +22,7 @@ public class StreamerTest {
                 .name("The Godfather")
                 .build();
 
-        Streamer streamer = new Streamer();
-        String actual = streamer.play(content);
-
-        assertThat(actual).isEqualTo("playing On-Demand: Rerun - The Godfather");
+        assertThat(streamer.play(content)).isEqualTo("playing On-Demand: Rerun - The Godfather");
 
     }
 
@@ -26,13 +31,10 @@ public class StreamerTest {
         Content content = new Content.ContentBuilder()
                 .classification(Classification.ONDEMAND)
                 .subclassification(SubClassification.CURRENT)
-                .name("Star Wars XX")
+                .name("Star Wars 2112")
                 .build();
 
-        Streamer streamer = new Streamer();
-        String actual = streamer.play(content);
-
-        assertThat(actual).isEqualTo("upgrade your plan to access this content");
+        assertThat(streamer.play(content)).isEqualTo("upgrade your plan to access this content");
 
     }
 
@@ -44,10 +46,7 @@ public class StreamerTest {
                 .name("Detroit Lions Football")
                 .build();
 
-        Streamer streamer = new Streamer();
-        String actual = streamer.play(content);
-
-        assertThat(actual).isEqualTo("upgrade your plan to access this content");
+        assertThat(streamer.play(content)).isEqualTo("upgrade your plan to access this content");
 
     }
 }
