@@ -1,13 +1,14 @@
 package stream.tv;
 
-public enum Classification {
-    ONDEMAND("On-Demand"),
-    LIVESTREAM("Live Stream");
+public enum Plan {
+    GOLD("gold"),
+    SILVER("silver"),
+    TRIAL("trial");
 
 
     private final String text;
 
-    Classification(String text) {
+    Plan(String text) {
         this.text = text;
     }
 

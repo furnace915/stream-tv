@@ -3,7 +3,7 @@ Stream TV Kata
 You have signed up for a new website Stream TV.
 By signing up for this site you can stream content
 
-Content consists of 3 main classifications:
+Content consists of 2 main categories.  Each category contains multiple subcategories:
 
 1.  Live Stream
     - Sports
@@ -15,9 +15,9 @@ Content consists of 3 main classifications:
 
 Plan Rules:
 
-* Trial Plan can watch any content in 1080p
-* Gold Plan can watch content in any resolution
-* Silver Plan can watch any content in any resolution, but cannot watch Sports
+* Trial Plan can watch any content until trial expires
+* Gold Plan can watch any content
+* Silver Plan can watch any content, except Sports subcategory
 * Free Plan can watch on-demand reruns only
 
 Kata Rules:
