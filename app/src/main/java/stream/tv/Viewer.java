@@ -1,15 +1,34 @@
 package stream.tv;
 
-public class Viewer {
-    static final String REQUIRES_PLAN_UPGRADE_MESSAGE = "upgrade your plan to access this content";
+import java.util.Objects;
+import java.util.Optional;
 
-    static String view(Content content) {
-        return new StringBuilder()
-                .append("playing ")
-                .append(content.getCategory().getText())
-                .append(": ")
-                .append(content.getSubclassification().getText())
-                .append(" - ")
-                .append(content.getName()).toString();
+public class Viewer implements Viewable {
+
+    public String view(Content content, Optional<Plan> plan) {
+        if (plan.isPresent()) {
+            return new StringBuilder()
+                    .append("playing ")
+                    .append(content.getCategory().getText())
+                    .append(": ")
+                    .append(content.getSubclassification().getText())
+                    .append(" - ")
+                    .append(content.getName())
+                    .toString();
+        }
+
+        if (Objects.equals(SubClassification.RERUN, content.getSubclassification())) {
+            return new StringBuilder()
+                    .append("playing ")
+                    .append(content.getCategory().getText())
+                    .append(": ")
+                    .append(content.getSubclassification().getText())
+                    .append(" - ")
+                    .append(content.getName())
+                    .toString();
+        }
+
+        return "upgrade your plan to access this content";
+
     }
 }
