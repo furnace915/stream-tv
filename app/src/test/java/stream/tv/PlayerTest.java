@@ -19,8 +19,8 @@ public class PlayerTest {
     @Test
     void Given_Free_Plan_When_Play_On_Demand_Rerun_Then_Provide_Content() {
         Content content = new Content.Builder()
-                .category(Category.ONDEMAND)
-                .subclassification(SubClassification.RERUN)
+                .mode(Mode.ONDEMAND)
+                .category(Category.RERUN)
                 .name("The Godfather")
                 .build();
 
@@ -32,8 +32,8 @@ public class PlayerTest {
     @Test
     void Given_Free_Plan_When_Play_On_Demand_Movie_Then_Block_Content() {
         Content content = new Content.Builder()
-                .category(Category.ONDEMAND)
-                .subclassification(SubClassification.CURRENT)
+                .mode(Mode.ONDEMAND)
+                .category(Category.CURRENT)
                 .name("Star Wars 2112")
                 .build();
 
@@ -45,8 +45,8 @@ public class PlayerTest {
     @Test
     void Given_Free_Plan_When_Play_Live_Stream_Then_Block_Content() {
         Content content = new Content.Builder()
-                .category(Category.LIVESTREAM)
-                .subclassification(SubClassification.SPORTS)
+                .mode(Mode.LIVESTREAM)
+                .category(Category.SPORTS)
                 .name("Detroit Lions Football")
                 .build();
 
@@ -58,8 +58,8 @@ public class PlayerTest {
     @Test
     void Given_Gold_Plan_When_Play_Live_Stream_Then_Stream_Content() {
         Content content = new Content.Builder()
-                .category(Category.LIVESTREAM)
-                .subclassification(SubClassification.SPORTS)
+                .mode(Mode.LIVESTREAM)
+                .category(Category.SPORTS)
                 .name("Michigan vs. Ohio State Football")
                 .build();
 

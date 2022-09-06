@@ -3,23 +3,23 @@ package stream.tv;
 
 public class Content {
 
-    private final Category category;
+    private final Mode mode;
 
-    private final SubClassification subclassification;
+    private final Category category;
     private final String name;
 
     private Content(Builder builder) {
+        this.mode = builder.mode;
         this.category = builder.category;
-        this.subclassification = builder.subclassification;
         this.name = builder.name;
+    }
+
+    public Mode getMode() {
+        return mode;
     }
 
     public Category getCategory() {
         return category;
-    }
-
-    public SubClassification getSubclassification() {
-        return subclassification;
     }
 
     public String getName() {
@@ -28,18 +28,18 @@ public class Content {
 
     public static class Builder {
 
-        private Category category;
+        private Mode mode;
 
-        private SubClassification subclassification;
+        private Category category;
         private String name;
 
-        public Builder category(Category category) {
-            this.category = category;
+        public Builder mode(Mode mode) {
+            this.mode = mode;
             return this;
         }
 
-        public Builder subclassification(SubClassification classification) {
-            this.subclassification = classification;
+        public Builder category(Category classification) {
+            this.category = classification;
             return this;
         }
 

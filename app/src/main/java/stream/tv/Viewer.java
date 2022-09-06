@@ -9,20 +9,20 @@ public class Viewer implements Viewable {
         if (plan.isPresent()) {
             return new StringBuilder()
                     .append("playing ")
-                    .append(content.getCategory().getText())
+                    .append(content.getMode().getText())
                     .append(": ")
-                    .append(content.getSubclassification().getText())
+                    .append(content.getCategory().getText())
                     .append(" - ")
                     .append(content.getName())
                     .toString();
         }
 
-        if (Objects.equals(SubClassification.RERUN, content.getSubclassification())) {
+        if (Objects.equals(Category.RERUN, content.getCategory())) {
             return new StringBuilder()
                     .append("playing ")
-                    .append(content.getCategory().getText())
+                    .append(content.getMode().getText())
                     .append(": ")
-                    .append(content.getSubclassification().getText())
+                    .append(content.getCategory().getText())
                     .append(" - ")
                     .append(content.getName())
                     .toString();

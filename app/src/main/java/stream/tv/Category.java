@@ -1,9 +1,9 @@
 package stream.tv;
 
 public enum Category {
-    ONDEMAND("On-Demand"),
-    LIVESTREAM("Live Stream");
-
+    CURRENT("Current"),
+    RERUN("Rerun"),
+    SPORTS("Sports");
 
     private final String text;
 
