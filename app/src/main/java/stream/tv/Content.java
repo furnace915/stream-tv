@@ -3,19 +3,19 @@ package stream.tv;
 
 public class Content {
 
-    private final Classification classification;
+    private final Category category;
 
     private final SubClassification subclassification;
     private final String name;
 
-    private Content(ContentBuilder contentBuilder) {
-        this.classification = contentBuilder.classification;
-        this.subclassification = contentBuilder.subclassification;
-        this.name = contentBuilder.name;
+    private Content(Builder builder) {
+        this.category = builder.category;
+        this.subclassification = builder.subclassification;
+        this.name = builder.name;
     }
 
-    public Classification getClassification() {
-        return classification;
+    public Category getCategory() {
+        return category;
     }
 
     public SubClassification getSubclassification() {
@@ -26,25 +26,25 @@ public class Content {
         return name;
     }
 
-    public static class ContentBuilder {
+    public static class Builder {
 
-        private Classification classification;
+        private Category category;
 
         private SubClassification subclassification;
         private String name;
 
-        public ContentBuilder classification(Classification classification) {
-            this.classification = classification;
+        public Builder category(Category category) {
+            this.category = category;
             return this;
         }
 
-        public ContentBuilder subclassification(SubClassification classification) {
+        public Builder subclassification(SubClassification classification) {
             this.subclassification = classification;
             return this;
         }
 
 
-        public ContentBuilder name(String name) {
+        public Builder name(String name) {
             this.name = name;
             return this;
         }

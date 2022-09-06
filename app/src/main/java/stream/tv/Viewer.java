@@ -6,7 +6,7 @@ public class Viewer {
     static String view(Content content) {
         return new StringBuilder()
                 .append("playing ")
-                .append(content.getClassification().getText())
+                .append(content.getCategory().getText())
                 .append(": ")
                 .append(content.getSubclassification().getText())
                 .append(" - ")

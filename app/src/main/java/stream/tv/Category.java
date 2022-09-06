@@ -1,13 +1,13 @@
 package stream.tv;
 
-public enum Classification {
+public enum Category {
     ONDEMAND("On-Demand"),
     LIVESTREAM("Live Stream");
 
 
     private final String text;
 
-    Classification(String text) {
+    Category(String text) {
         this.text = text;
     }
 
