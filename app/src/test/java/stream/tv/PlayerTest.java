@@ -7,13 +7,13 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StreamerTest {
+public class PlayerTest {
 
-    private Streamer streamer;
+    private Player player;
 
     @BeforeEach
     void setUp() {
-        streamer = new Streamer();
+        player = new Player();
     }
 
     @Test
@@ -24,7 +24,7 @@ public class StreamerTest {
                 .name("The Godfather")
                 .build();
 
-        assertThat(streamer.play(content,Optional.empty() )).isEqualTo("playing On-Demand: Rerun - The Godfather");
+        assertThat(player.play(content,Optional.empty() )).isEqualTo("playing On-Demand: Rerun - The Godfather");
 
     }
 
@@ -36,7 +36,7 @@ public class StreamerTest {
                 .name("Star Wars 2112")
                 .build();
 
-        assertThat(streamer.play(content, Optional.empty())).isEqualTo("upgrade your plan to access this content");
+        assertThat(player.play(content, Optional.empty())).isEqualTo("upgrade your plan to access this content");
 
     }
 
@@ -48,7 +48,7 @@ public class StreamerTest {
                 .name("Detroit Lions Football")
                 .build();
 
-        assertThat(streamer.play(content,Optional.empty() )).isEqualTo("upgrade your plan to access this content");
+        assertThat(player.play(content,Optional.empty() )).isEqualTo("upgrade your plan to access this content");
 
     }
 
@@ -60,7 +60,7 @@ public class StreamerTest {
                 .name("Michigan vs. Ohio State Football")
                 .build();
 
-        assertThat(streamer.play(content, Optional.of(Plan.GOLD))).isEqualTo("playing Live Stream: Sports - Michigan vs. Ohio State Football");
+        assertThat(player.play(content, Optional.of(Plan.GOLD))).isEqualTo("playing Live Stream: Sports - Michigan vs. Ohio State Football");
 
     }
 }

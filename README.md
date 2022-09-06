@@ -1,7 +1,8 @@
 Stream TV Kata
 
 You have signed up for a new website Stream TV.
-By signing up for this site you can stream content
+By signing up for this site you can stream content or watch prerecorded content on-demand.  
+You can also view prerecorded reruns on demand without a plan.
 
 Content consists of 2 main categories.  Each category contains multiple subcategories:
 
